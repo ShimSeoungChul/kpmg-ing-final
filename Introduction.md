@@ -1,6 +1,5 @@
 # A Very Brief Introduction
 
-
 This project attempts to create a platform in which the general populace can help simplify the data pre-processing process. The average person, henceforth called the `user`, joins the data pre-preprocessing process with the guidance of Robotic Process Automation. The pre-processed data is then sent to entities in need of data (ex. AI developers, data engineers, etc), henceforth called `requester`s.
 
 In comparison to existing players, our item filters data through `RPA` before sending the processed data to users for confirmation. Unlike the manual entering of data required in the present market, robotic process automation ensures that the data is already entered into the system; the user's role is merely check if the data has been input correctly.
