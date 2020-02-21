@@ -7,7 +7,7 @@ Usage:
 
 Example:
     python detect.py images 0.5 0.5 data/images/dog.jpg data/images/office.jpg
-    python detect.py video 0.5 0.5 data/video/shinjuku.mp4
+    python detect.py video 0.5 0.5 data/video/1.mp4
 
 Note that only one video can be processed at one run.
 """
@@ -20,7 +20,7 @@ from yolo_v3 import Yolo_v3
 from utils import load_images, load_class_names, draw_boxes, draw_frame
 
 _MODEL_SIZE = (416, 416)
-_CLASS_NAMES_FILE = './data/labels/coco.names'
+_CLASS_NAMES_FILE = 'C:/Users/m01411/OneDrive/바탕 화면/2/data/labels/coco.names'
 _MAX_OUTPUT_SIZE = 20
 
 
@@ -54,7 +54,7 @@ def main(type, iou_threshold, confidence_threshold, input_names):
         saver = tf.train.Saver(tf.global_variables(scope='yolo_v3_model'))
 
         with tf.Session() as sess:
-            saver.restore(sess, './weights/model.ckpt')
+            saver.restore(sess, 'C:/Users/m01411/OneDrive/바탕 화면/2/weights/model.ckpt')
 
             win_name = 'Video detection'
             cv2.namedWindow(win_name)
@@ -63,7 +63,7 @@ def main(type, iou_threshold, confidence_threshold, input_names):
                           cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
             fourcc = cv2.VideoWriter_fourcc(*'X264')
             fps = cap.get(cv2.CAP_PROP_FPS)
-            out = cv2.VideoWriter('./detections/detections.mp4', fourcc, fps,
+            out = cv2.VideoWriter('C:/Users/m01411/OneDrive/바탕 화면/2/detections/detections01.mp4', fourcc, fps,
                                   (int(frame_size[0]), int(frame_size[1])))
 
             try:
