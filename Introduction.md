@@ -1,5 +1,6 @@
 # A Brief Introduction
 
+
 This project attempts to create a platform in which the general populace can help simplify the data pre-processing process. The average person, henceforth called the `user`, joins the data pre-preprocessing process with the guidance of Robotic Process Automation. The pre-processed data is then sent to entities in need of data (ex. AI developers, data engineers, etc), henceforth called `requester`s.
 
 In comparison to existing players, our item filters data through `RPA` before sending the processed data to users for confirmation. Unlike the manual entering of data required in the present market, robotic process automation ensures that the data is already entered into the system; the user's role is merely check if the data has been input correctly.
@@ -26,8 +27,9 @@ However, our current strategy is *not* to compete with abovementioned existing p
 ## Technical Details
 
 1. Image Labelling Automation
-
-
+이미지 라벨링은 이미지 안에 오브젝트들을 파악하여 그것을 텍스트형태로 출력한다.
+텍스트 형태로 나와 전처리 하기 쉽게 하고, 오브젝트 인식률을 높이기 위하여 YOLO V3 기술을 사용하였다.
+나올수 있는 여러가지 오브젝트 중에 한개를 선택하여 라벨링을 완료시킨다.
 <br>
 
 2. OCR Labelling Automation
@@ -36,8 +38,11 @@ However, our current strategy is *not* to compete with abovementioned existing p
 <br>
 
 3. Video Labelling Automation
-
-
+비디오 라벨링은 이미지 라벨링의 연장선으로써, 비디오를 마치 이미지처럼 여러장의 이미지라벨링을 하는것이다.
+CenterNet 형식의 오브젝트에 프레임을 씌우는 YOLO V3 기술을 사용하여 오브젝트 인식을 최대한으로 할수있다. 
+자동차 위에 카메라 또는 CCTV 를 설치하여 동영상 안의 오브젝트들을 실시간으로 처리할수있다.
+프레임을 조절하여 중복되는 이미지를 최대한 피하고, 저장된 이미지들을 이미지 라벨링을 시킨다.
+.
 <br>
 
 4. Sound Labelling Automation
