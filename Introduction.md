@@ -1,4 +1,4 @@
-# A Very Brief Introduction
+# A Brief Introduction
 
 This project attempts to create a platform in which the general populace can help simplify the data pre-processing process. The average person, henceforth called the `user`, joins the data pre-preprocessing process with the guidance of Robotic Process Automation. The pre-processed data is then sent to entities in need of data (ex. AI developers, data engineers, etc), henceforth called `requester`s.
 
