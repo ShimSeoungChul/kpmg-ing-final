@@ -8,8 +8,7 @@ In comparison to existing players, our item filters data through `RPA` before se
 Our RPA solution can be divided into four parts: 
 1. Image Labelling Automation
 2. OCR Labelling Automation
-3. Video Labelling Automation
-4. Sound Labelling Automation
+3. Sound Labelling Automation
 
 <br>
 <br>
@@ -43,19 +42,7 @@ After being suggested several possible object choices, the user selects the most
 <br>
 <br>
 
-3. Video Labelling Automation <br>
-As an extension of the Image Labelling process, Video Labelling labels objects within an video, in the format of multiple images. YOLO V3 technology, specifically that which frames objects in the form of CenterNet, was used to maximise object recognition. 
-<br>
-<br>
-Object data can be pre-processed from videos installed within transportation or CCTVs; this process can be carried out at a real-time rate of time. By adjusting the frame, we can prevent images from repeating and apply labels onto saved images. 
-<br>
-<br>
-비디오 라벨링은 이미지 라벨링의 연장선으로써, 비디오를 마치 이미지처럼 여러장의 이미지라벨링을 하는것이다. CenterNet 형식의 오브젝트에 프레임을 씌우는 YOLO V3 기술을 사용하여 오브젝트 인식을 최대한으로 할수있다. 
-자동차 위에 카메라 또는 CCTV 를 설치하여 동영상 안의 오브젝트들을 실시간으로 처리할수있다. 프레임을 조절하여 중복되는 이미지를 최대한 피하고, 저장된 이미지들을 이미지 라벨링을 시킨다.
-<br>
-<br>
-
-4. Sound Labelling Automation
+3. Sound Labelling Automation
 
 
 <br>
