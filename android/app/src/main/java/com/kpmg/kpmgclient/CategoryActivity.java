@@ -66,7 +66,7 @@ public class CategoryActivity extends AppCompatActivity {
         stt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), GraphActivity.class );
+                Intent intent = new Intent(getApplicationContext(), SttActivity.class );
                 startActivity(intent);
             }
         });

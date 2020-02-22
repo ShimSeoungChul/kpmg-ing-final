@@ -7,9 +7,6 @@
     tools:context=".HomeActivity"
     android:background="@color/main">
 
-
-
-
         <LinearLayout
             android:layout_width="300dp"
             android:layout_height="150dp"
@@ -18,9 +15,19 @@
             android:id="@+id/rewardLayout"
             android:gravity="center"
             android:orientation="vertical">
+            <TextView
+                android:id="@+id/rank"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="상위 13% 달성했어요!"
+                android:textStyle="bold"
+
+                android:textColor="#ffffff"
+                android:textSize="15dp" />
 
             <TextView
                 android:id="@+id/currentCoin"
+                android:layout_marginTop="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="현재 포인트"
@@ -32,7 +39,7 @@
                 android:id="@+id/currentCoinValue"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="3260"
+                android:text="630"
                 android:textColor="#ffffff"
                 android:textSize="40dp" />
             <LinearLayout

@@ -12,18 +12,24 @@ import okhttp3.Request;
 import okhttp3.RequestBody;
 import okhttp3.Response;
 
+
 public class CmmnUtil {
 
     private static String URL = "http://49.247.215.15:8080";
-//    private static String URL = "http://172.30.1.6:8080";
-    //    private static String URL = "http://192.168.0.59:8080";
+    //    private static String URL = "http://172.30.1.6:8080";
     public static  final String IMAGE_INFO_GET = URL + "/images/getImageInfo";
     public static  final String HELLO_WORLD = URL + "/helloWorld";
     public static  final String IMAGE_INFO_UPDATE = URL + "/images/updateImageInfo";
     public static  final String OCR_INFO_GET = URL + "/ocr/getOcrInfo";
+    public static final String OCR_INFO_INSERT = URL + "/ocr/";
     public static final String USER_POINT_GET = URL + "/users";
     public static final String USER_RANK_GET = URL + "/users/rank";
+    public static final String USER_WORK_GET = URL + "/users/work";
     public static final String USER_EACH_POINT_GET = URL + "/users/eachPoint";
+    public static final String Video_Play_GET = URL + "/videos/play";
+    public static final String Lidar_Video_GET = URL + "/videos/";
+    public static final String VIDEO_TO_TEXT_GET = URL + "/videos/toText";
+    public static final String STT_INFO_INSERT = URL + "/videos/stt/";
 
     public static String POST(String url, String jsonStr) throws Exception {
         /**

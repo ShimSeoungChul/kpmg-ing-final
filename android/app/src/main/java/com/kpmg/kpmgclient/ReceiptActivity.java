@@ -2,6 +2,7 @@ package com.kpmg.kpmgclient;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
@@ -26,14 +27,13 @@ import org.json.JSONObject;
 import java.io.ByteArrayOutputStream;
 import java.util.HashMap;
 import java.util.concurrent.ExecutionException;
-
 public class ReceiptActivity extends AppCompatActivity {
 
     ImageView receiptImage;
-    TextView totalPriceTv, priceTv, numTv, nameTv;
-    EditText totalPriceEt, priceEt, numEt, nameEt;
+    TextView totalPriceTv, priceTv, numTv, nameTv, storeTv;
+    EditText totalPriceEt, priceEt, numEt, nameEt, storeEt;
     Button modifyButton, sendButton;
-    String totalPrice;
+    String totalPrice, num, price, name, store;
     LinearLayout contTextView, contEditText;
 
     @Override
@@ -56,6 +56,9 @@ public class ReceiptActivity extends AppCompatActivity {
 
         nameTv = (TextView) findViewById(R.id.nameTv);
         nameEt = (EditText) findViewById(R.id.nameEt);
+
+        storeTv = (TextView) findViewById(R.id.storeTv);
+        storeEt = (EditText) findViewById(R.id.storeEt);
 
         modifyButton = (Button) findViewById(R.id.modifyButton);
         sendButton = (Button) findViewById(R.id.sendButton);
@@ -93,8 +96,18 @@ public class ReceiptActivity extends AppCompatActivity {
             Log.d("jsonString",jsonString);
             try {
                 JSONObject json = new JSONObject(jsonString);
-                totalPrice = json.getString("totalPrice");
+                totalPrice = "구매총액: "+ json.getString("totalPrice");
                 totalPriceTv.setText(totalPrice);
+                store = "지점: "+ json.getString("branch");
+                storeTv.setText(store);
+
+                num = "구매수량: "+ json.getString("num");
+                numTv.setText(num);
+                price = "구매가격: "+ json.getString("price");
+                priceTv.setText(totalPrice);
+                name = "상품이름: "+ json.getString("name");
+                nameTv.setText(name);
+
             } catch (JSONException e) {
                 e.printStackTrace();
             }
@@ -109,7 +122,6 @@ public class ReceiptActivity extends AppCompatActivity {
         @Override
         public void onClick(View v) {
 
-
             if(modifyButton.getText().toString().equals("수정")){
                 Toast.makeText(getApplicationContext(),"수정", Toast.LENGTH_SHORT).show();
                 totalPrice = totalPriceTv.getText().toString();
@@ -117,6 +129,12 @@ public class ReceiptActivity extends AppCompatActivity {
                 contEditText.setVisibility(View.VISIBLE);
                 contTextView.setVisibility(View.GONE);
                 modifyButton.setText("완료");
+
+                numEt.setText(num);
+                totalPriceEt.setText(totalPrice);
+                storeEt.setText(store);
+                nameEt.setText(name);
+                priceEt.setText(price);
 
             }else{
                 Toast.makeText(getApplicationContext(),"실", Toast.LENGTH_SHORT).show();
@@ -129,23 +147,4 @@ public class ReceiptActivity extends AppCompatActivity {
         }
     }
 
-//    class SendListener implements View.OnClickListener {
-//
-//        int i = 1;
-//
-//        @Override
-//        public void onClick(View v) {
-//
-//            receiptImage.setImageResource(ImageId[i]);
-//            getImageInfo();
-//            RadioButton selectedRdo = (RadioButton)findViewById(radioGroup.getCheckedRadioButtonId()); // rg 라디오그룹의 체크된(getCheckedRadioButtonId) 라디오버튼 객체 맵핑
-//            selectedValue = selectedRdo.getText().toString(); // 해당 라디오버튼 객체의 값 가져오기
-//
-//            Toast.makeText(getApplicationContext(),selectedValue, Toast.LENGTH_SHORT).show();
-//            i+=1;
-//            if(i == ImageId.length) {
-//                return;
-//            }
-//        }
-//    }
 }

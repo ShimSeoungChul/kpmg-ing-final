@@ -6,6 +6,31 @@
     android:layout_height="match_parent"
     tools:context=".GraphActivity">
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:id="@+id/contTitle"
+        android:orientation="horizontal"
+
+        android:background="@drawable/title_border">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_navigate_before_black_24dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="나의 차트"
+            android:paddingLeft="10dp"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textColor="#2C2C2C"
+            android:textSize="20dp"/>
+    </RelativeLayout>
+
     <com.github.mikephil.charting.charts.PieChart
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -13,32 +38,33 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="80dp"
+        android:layout_height="50dp"
         android:layout_alignParentBottom="true"
-        android:background="@color/colorAccent"
+        android:background="@color/gray"
+        android:gravity="center"
         android:orientation="horizontal">
 
 
         <ImageView
             android:id="@+id/graph"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:layout_weight="1"
-            android:src="@drawable/ic_menu_black_24dp" />
+            android:src="@drawable/ic_graph" />
 
         <ImageView
             android:id="@+id/home"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:layout_weight="1"
-            android:src="@drawable/ic_home_black_24dp" />
+            android:src="@drawable/ic_home" />
 
         <ImageView
             android:id="@+id/main"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:layout_weight="1"
-            android:src="@drawable/coin" />
+            android:src="@drawable/ic_category" />
 
 
     </LinearLayout>

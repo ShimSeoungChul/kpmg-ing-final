@@ -13,8 +13,8 @@
         android:layout_height="60dp"
         android:id="@+id/contTitle"
         android:orientation="horizontal"
-
         android:background="@drawable/title_border">
+
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -53,7 +53,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="17dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="15dp"
             android:text="lactate_default_value"/>
 
         <RadioButton
@@ -61,21 +61,21 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="17dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="15dp"
             android:text="lactate_calibrated_value" />
         <RadioButton
             android:id="@+id/option3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="17dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="15dp"
             android:text="lactate_custom_value"/>
         <RadioButton
             android:id="@+id/option4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="17dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="15dp"
             android:text="직접입력"/>
     </RadioGroup>
 

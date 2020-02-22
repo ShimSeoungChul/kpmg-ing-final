@@ -31,21 +31,21 @@ public class HomeActivity extends AppCompatActivity {
 
         StatusUtil.setStatusBarColor(this, StatusUtil.StatusBarColorType.MAIN_STATUS_BAR);
 
-        totalCoin = (TextView) findViewById(R.id.totalCoin);
+        totalCoin = (TextView) findViewById(R.id.totalCoinValue);
 
         getUserPoint();
 
         // 리사이클러뷰에 표시할 데이터 리스트 생성.
         ArrayList<Dictionary> list = new ArrayList<>();
             list.add(new Dictionary("2020-02-17 15:23:29","음성 자막 생성","30")) ;
-        list.add(new Dictionary("2020-02-17 16:03:29","음성 자막 생성","30")) ;
-        list.add(new Dictionary("2020-02-17 15:23:29","음성 자막 생성","30")) ;
-        list.add(new Dictionary("2020-02-17 15:23:29","음성 자막 생성","30")) ;
-        list.add(new Dictionary("2020-02-17 15:23:29","음성 자막 생성","30")) ;
-        list.add(new Dictionary("2020-02-17 15:23:29","음성 자막 생성","30")) ;
-        list.add(new Dictionary("2020-02-17 15:23:29","음성 자막 생성","30")) ;
-        list.add(new Dictionary("2020-02-17 15:23:29","음성 자막 생성","30")) ;
-        list.add(new Dictionary("2020-02-17 15:23:29","음성 자막 생성","30")) ;
+        list.add(new Dictionary("2020-02-17 16:03:29","이미지 라벨링","10")) ;
+        list.add(new Dictionary("2020-02-17 16:04:59","음성 자막 생성","30")) ;
+        list.add(new Dictionary("2020-02-17 16:16:04","OCR 라벨","20")) ;
+        list.add(new Dictionary("2020-02-17 16:16:07","음성 자막 생성","30")) ;
+        list.add(new Dictionary("2020-02-17 16:23:09","OCR 라벨","20")) ;
+        list.add(new Dictionary("2020-02-17 16:11:38","음성 자막 생성","30")) ;
+        list.add(new Dictionary("2020-02-17 17:18:32","이미지 라벨링","10")) ;
+        list.add(new Dictionary("2020-02-17 18:23:38","이미지 라벨링","10")) ;
 
 
 
@@ -95,9 +95,8 @@ public class HomeActivity extends AppCompatActivity {
 
 
 
-            String aa = new GetUserPoint().execute(CmmnUtil.USER_POINT_GET+"/test").get();
-            Log.d("aaa====", aa);
-            totalCoin.setText(aa);
+            String jsonString = new GetUserPoint().execute(CmmnUtil.USER_POINT_GET+"/test").get();
+            totalCoin.setText("+ "+3210);
 
 
 

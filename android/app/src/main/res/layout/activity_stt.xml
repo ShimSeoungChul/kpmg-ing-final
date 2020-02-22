@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:weightSum="10"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".SttActivity">
+
+    <VideoView
+        android:id="@+id/sttVideo"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4">
+    </VideoView>
+
+    <Button
+        android:id="@+id/sttProcessBtn"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:textStyle="bold"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_weight="1"
+        android:textColor="@color/mint"
+        android:background="@drawable/modify_button2"
+        android:onClick="processVideo"
+        android:text="영상 불러오기" />
+
+    <EditText
+        android:id="@+id/sttEditText"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:textStyle="bold"
+        android:layout_weight="4"
+        android:text="전처리전" />
+
+    <Button
+        android:id="@+id/sttEndBtn"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:onClick="sttEnd"
+        android:textStyle="bold"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        android:textColor="#ffffff"
+        android:background="@drawable/next_button"
+        android:text="완료" />
+
+</LinearLayout>

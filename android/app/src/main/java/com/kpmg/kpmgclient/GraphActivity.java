@@ -108,7 +108,7 @@ public class GraphActivity extends AppCompatActivity {
                 int ocrInt = json.getInt("ocr");
                 int sttInt = json.getInt("stt");
                 Log.e("piechartvalue확인","image:"+imageInt+"  ocr:"+ocrInt+"   stt:"+sttInt);
-                setPieChart(40, 30, 30);
+                setPieChart(imageInt, ocrInt, sttInt);
             } catch (JSONException e) {
                 e.printStackTrace();
             }
